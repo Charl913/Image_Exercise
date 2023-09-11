@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ImageExercise.Exercise">
+             x:Class="ImageExercise.Exercise"
+             BackgroundColor="Black">
     <AbsoluteLayout>
-        <Button Text="Previous"/>
-        <Button Text="Next"/>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                     AbsoluteLayout.LayoutFlags="All">
+            <Image Source="https://pixabay.com/get/gd23e3d0a2e0e868e470c83f76ee8f79ffd31b72bb2bf8c5ea810c2a4b519fb5a9fdc9a41a60618d5377e94042821d5402261579bd8367c25500d83b0eaba3744_1280.jpg"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     AbsoluteLayout.LayoutBounds="0,0,1,100"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <Button Text="Previous"
+                    HorizontalOptions="Center"/>
+            <ActivityIndicator IsRunning="True"
+                               HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Next"/>
+        </StackLayout>
     </AbsoluteLayout>
 </ContentPage>
