@@ -3,21 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ImageExercise.Exercise"
              BackgroundColor="Black">
+    
     <AbsoluteLayout>
+        
         <StackLayout VerticalOptions="Center"
                      HorizontalOptions="Center"
                      AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
                      AbsoluteLayout.LayoutFlags="All">
-            <Image Source="https://pixabay.com/get/gd23e3d0a2e0e868e470c83f76ee8f79ffd31b72bb2bf8c5ea810c2a4b519fb5a9fdc9a41a60618d5377e94042821d5402261579bd8367c25500d83b0eaba3744_1280.jpg"/>
+            
+            <Image x:Name="image"/>
+            
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal"
                      AbsoluteLayout.LayoutBounds="0,0,1,100"
                      AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
-            <Button Text="Previous"
-                    HorizontalOptions="Center"/>
-            <ActivityIndicator IsRunning="True"
-                               HorizontalOptions="CenterAndExpand"/>
-            <Button Text="Next"/>
+            
+            <Button HorizontalOptions="Center"
+                    Clicked="Button_Clicked"
+                    ImageSource="left_arrow1.png"
+                    BackgroundColor="Black"/>
+            
+            <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"
+                               HorizontalOptions="CenterAndExpand"
+                               Color="White"/>
+            
+            <Button ImageSource="right_arrow24.png"
+                    BackgroundColor="Black"
+                    Clicked="Button_Clicked_1"/>
+            
         </StackLayout>
+        
     </AbsoluteLayout>
+    
 </ContentPage>

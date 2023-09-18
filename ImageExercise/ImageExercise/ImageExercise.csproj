@@ -12,6 +12,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\architecture-1868667_1280.jpg" />
+    <None Remove="Images\castelmezzano-1979546_1280.jpg" />
+    <None Remove="Images\village-279013_1280.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\architecture-1868667_1280.jpg" />
+    <EmbeddedResource Include="Images\castelmezzano-1979546_1280.jpg" />
+    <EmbeddedResource Include="Images\village-279013_1280.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
